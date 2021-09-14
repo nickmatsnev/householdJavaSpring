@@ -1,0 +1,93 @@
+###
+POST http://households-env.eba-jrhgd62v.us-east-2.elasticbeanstalk.com/users/login
+Content-Type: application/json
+
+{
+  "email": "mail@gmail.com",
+  "name": "Michael2",
+  "age": 18,
+  "password": "password"
+}
+
+###
+POST 192.168.0.214:8080/households
+Content-Type: application/json
+
+{
+  "address": "Address 1",
+  "name": "Household 1"
+}
+
+###
+POST 192.168.0.214:8080/households/0/invite
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjI4NDU0ODQsInVzZXJJZCI6NH0.ipR2MjXiNtu1UAFmELi-nFi8OZVJywqDxp-H_jKr2M4
+
+{
+  "email": "mail@mail.com"
+}
+
+###
+GET 192.168.0.214:8080/households
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjI4NDU0ODQsInVzZXJJZCI6NH0.ipR2MjXiNtu1UAFmELi-nFi8OZVJywqDxp-H_jKr2M4
+
+{
+}
+
+###
+POST 192.168.0.214:8080/households
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjI4NDU0ODQsInVzZXJJZCI6NH0.ipR2MjXiNtu1UAFmELi-nFi8OZVJywqDxp-H_jKr2M4
+
+{
+  "name": "Household 2",
+  "address": "Address 2"
+}
+
+###
+GET 192.168.0.214:8080/invitations
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjI4NDU0ODQsInVzZXJJZCI6NH0.ipR2MjXiNtu1UAFmELi-nFi8OZVJywqDxp-H_jKr2M4
+
+{
+
+}
+
+###
+POST 192.168.0.214:8080/households/8/invite
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjI4NDU0ODQsInVzZXJJZCI6NH0.ipR2MjXiNtu1UAFmELi-nFi8OZVJywqDxp-H_jKr2M4
+
+{
+"email": "2@gmail.com"
+}
+
+
+
+###
+GET 192.168.0.214:8080/households
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjI4NDc0NTcsInVzZXJJZCI6MTJ9.haNOGC6zVid8kwAb7XS0poFkzFkUPLww4bGO5yGGKrI
+
+{
+
+}
+
+###
+POST 192.168.0.214:8080/invitations/16/accept
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MjI4NDc0NTcsInVzZXJJZCI6MTJ9.haNOGC6zVid8kwAb7XS0poFkzFkUPLww4bGO5yGGKrI
+
+{
+
+}
+
+###
+GET 192.168.0.214:8080/actuator/health
+Content-Type: application/json
+
+{
+
+}
+
